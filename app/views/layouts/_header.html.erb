@@ -1,6 +1,20 @@
 <header>
-    <ul>
-      <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "Help", help_path %></li>
-    </ul>
+  <div class="row">
+    <div class="twelve columns">
+      <h1>Pay Up Chump</h1> 
+    </div>
+  </div>
+  <div class="row">
+    <div class="twelve columns">
+      <div class="menu">
+        <ul>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "New Payment", new_order_path %></li>
+          <li><%= link_to "List Payments", orders_path %></li>
+          <li><%= link_to "List Payment Transactions", help_path %></li>
+          <li><%= link_to "Help", help_path %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </header>
