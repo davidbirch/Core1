@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Order:</b>
+  <%= @order_transaction.order_id %>
+</p>
+
+<p>
+  <b>Trxn status:</b>
+  <%= @order_transaction.trxn_status %>
+</p>
+
+<p>
+  <b>Trxn number:</b>
+  <%= @order_transaction.trxn_number %>
+</p>
+
+<p>
+  <b>Trxn reference:</b>
+  <%= @order_transaction.trxn_reference %>
+</p>
+
+<p>
+  <b>Trxn option 1:</b>
+  <%= @order_transaction.trxn_option_1 %>
+</p>
+
+<p>
+  <b>Trxn option 2:</b>
+  <%= @order_transaction.trxn_option_2 %>
+</p>
+
+<p>
+  <b>Trxn option 3:</b>
+  <%= @order_transaction.trxn_option_3 %>
+</p>
+
+<p>
+  <b>Auth code:</b>
+  <%= @order_transaction.auth_code %>
+</p>
+
+<p>
+  <b>Returnamount:</b>
+  <%= @order_transaction.returnamount %>
+</p>
+
+<p>
+  <b>Trxn error:</b>
+  <%= @order_transaction.trxn_error %>
+</p>
+
+<p>
+  <b>Params:</b>
+  <%= @order_transaction.params %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_transaction_path(@order_transaction) %> |
+<%= link_to 'Back', order_transactions_path %>

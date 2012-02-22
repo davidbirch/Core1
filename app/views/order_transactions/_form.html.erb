@@ -1,0 +1,61 @@
+<%= form_for(@order_transaction) do |f| %>
+  <% if @order_transaction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order_transaction.errors.count, "error") %> prohibited this order_transaction from being saved:</h2>
+
+      <ul>
+      <% @order_transaction.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :order_id %><br />
+    <%= f.number_field :order_id %>
+  </div>
+  <div class="field">
+    <%= f.label :trxn_status %><br />
+    <%= f.check_box :trxn_status %>
+  </div>
+  <div class="field">
+    <%= f.label :trxn_number %><br />
+    <%= f.text_field :trxn_number %>
+  </div>
+  <div class="field">
+    <%= f.label :trxn_reference %><br />
+    <%= f.text_field :trxn_reference %>
+  </div>
+  <div class="field">
+    <%= f.label :trxn_option_1 %><br />
+    <%= f.text_field :trxn_option_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :trxn_option_2 %><br />
+    <%= f.text_field :trxn_option_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :trxn_option_3 %><br />
+    <%= f.text_field :trxn_option_3 %>
+  </div>
+  <div class="field">
+    <%= f.label :auth_code %><br />
+    <%= f.text_field :auth_code %>
+  </div>
+  <div class="field">
+    <%= f.label :returnamount %><br />
+    <%= f.number_field :returnamount %>
+  </div>
+  <div class="field">
+    <%= f.label :trxn_error %><br />
+    <%= f.text_field :trxn_error %>
+  </div>
+  <div class="field">
+    <%= f.label :params %><br />
+    <%= f.text_area :params %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

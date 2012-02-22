@@ -22,6 +22,12 @@ end
 
 gem 'jquery-rails'
 
+gem "zurb-foundation", :group => :assets
+
+gem "activemerchant"
+
+ gem 'annotate', '~> 2.4.1.beta' 
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

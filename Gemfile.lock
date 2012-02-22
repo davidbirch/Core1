@@ -14,6 +14,16 @@ GEM
       rack-cache (~> 1.1)
       rack-test (~> 0.6.1)
       sprockets (~> 2.1.2)
+    active_utils (1.0.2)
+      activesupport (>= 2.3.11)
+      i18n
+    activemerchant (1.20.3)
+      active_utils (>= 1.0.2)
+      activesupport (>= 2.3.11)
+      braintree (>= 2.0.0)
+      builder (>= 2.0.0)
+      i18n
+      money (<= 3.7.1)
     activemodel (3.2.1)
       activesupport (= 3.2.1)
       builder (~> 3.0.0)
@@ -28,7 +38,10 @@ GEM
     activesupport (3.2.1)
       i18n (~> 0.6)
       multi_json (~> 1.0)
+    annotate (2.4.1.beta1)
     arel (3.0.0)
+    braintree (2.13.4)
+      builder (>= 2.0.0)
     builder (3.0.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -52,6 +65,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.17.2)
+    money (3.7.1)
+      i18n (~> 0.4)
     multi_json (1.1.0)
     mysql2 (0.3.11)
     polyglot (0.3.3)
@@ -98,14 +113,20 @@ GEM
     uglifier (1.2.3)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
+    zurb-foundation (2.1.5.1)
+      jquery-rails (>= 1.0)
+      rails (~> 3.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  activemerchant
+  annotate (~> 2.4.1.beta)
   coffee-rails (~> 3.2.1)
   jquery-rails
   mysql2
   rails (= 3.2.1)
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
+  zurb-foundation

@@ -1,4 +1,26 @@
 Core1::Application.routes.draw do
+  
+  
+
+  # -------------------------------------------------------
+  # static pages
+  match '/contact', :to => 'pages#contact'
+  match '/about',   :to => 'pages#about'
+  match '/help',    :to => 'pages#help'
+
+
+  
+  # -------------------------------------------------------
+  # specific resource routes
+  resources :order_transactions
+  resources :orders
+  
+  # -------------------------------------------------------
+  # default route
+  root :to => 'pages#home'
+
+  # -------------------------------------------------------
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

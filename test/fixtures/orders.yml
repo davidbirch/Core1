@@ -1,0 +1,24 @@
+# == Schema Information
+#
+# Table name: orders
+#
+#  id              :integer(4)      not null, primary key
+#  total_amount    :integer(4)
+#  first_name      :string(255)
+#  last_name       :string(255)
+#  card_expires_on :date
+#  created_at      :datetime        not null
+#  updated_at      :datetime        not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  total_amount: 1
+  first_name: MyString
+  last_name: MyString
+
+two:
+  total_amount: 1
+  first_name: MyString
+  last_name: MyString
