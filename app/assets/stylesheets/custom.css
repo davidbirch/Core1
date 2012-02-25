@@ -1,13 +1,18 @@
 
+
 #payHead {
     background: none repeat scroll 0 0 #222222;
-    border-bottom: 4px solid #08991F;
+    border-bottom: 5px solid #08991F;
     padding: 15px 20px 13px;
 }
 
 #payHead h1{
   color: #FFFFFF;
   
+}
+
+#payDebug{
+  display: none;
 }
 
 
@@ -33,3 +38,59 @@
 .menu ul li a:hover, .menu ul li .current{
     color: #fff;
     background-color:#0b75b2;}
+    
+
+label {  
+  float: left;  
+  width: 10em;  
+  margin-right: 1em;  
+  }
+select {
+  display: inline;
+  }
+fieldset {      
+  float: left;      
+  clear: both;      
+  width: 100%;      
+  margin: 0 0 -1em 0;        
+  padding: 0 0 1em 0;     
+  border: 1px solid #BFBAB0;      
+  background-color: #F2EFE9;      
+}
+fieldset.transaction {       
+  background-color: #E7ECEE;
+  width: 95%;   
+}   
+fieldset.submit {      
+  float: none;      
+  width: auto;      
+  border-style: none;      
+  padding-left: 15em;      
+  background-color: transparent;      
+}      
+fieldset ol {    
+  padding: 1em 1em 0 1em;    
+  list-style: none;    
+  }    
+fieldset li {  
+  float: left;  
+  clear: left;  
+  width: 100%;  
+  padding-bottom: 1em;  
+  }
+legend {      
+  margin-left: 1em;      
+  padding: 0;      
+  color: #000;      
+  font-weight: bold;      
+  }
+form fieldset{
+  margin:6px;
+  }
+  
+.form_actions{
+  padding-left: 20px;
+}
+form li{
+  margin-bottom: 0px;
+}

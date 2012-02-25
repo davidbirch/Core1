@@ -1,0 +1,66 @@
+<fieldset class="transaction">
+<legend>Transaction ID:  <%= order_transaction.id %></legend>
+<ol>
+<li>
+  action:
+  <%= order_transaction.action %>
+</li>
+<li>
+  amount:
+  <%= order_transaction.amount %>
+</li>
+<li>
+  trxn_status:
+  <%= order_transaction.trxn_status %>
+</li>
+<li>
+  trxn_number:
+  <%= order_transaction.trxn_number %>
+</li>
+<li>
+  trxn_reference:
+  <%= order_transaction.trxn_reference %>
+</li>
+<li>
+  trxn_option_1:
+  <%= order_transaction.trxn_option_1 %>
+</li>
+<li>
+  trxn_option_2:
+  <%= order_transaction.trxn_option_2 %>
+</li>
+<li>
+  trxn_option_3:
+  <%= order_transaction.trxn_option_3 %>
+</li>
+<li>
+  auth_code:
+  <%= order_transaction.auth_code %>
+</li>
+<li>
+  return_amount:
+  <%= order_transaction.return_amount %>
+</li>
+<li>
+  trxn_error:
+  <%= order_transaction.trxn_error %>
+</li>
+<li>
+  params:
+  <%= order_transaction.params %>
+</li>
+
+
+
+<li>
+  Created at:
+  <%= order_transaction.created_at %>
+</li>
+<li>
+  Updated at:
+  <%= order_transaction.updated_at %>
+</li>
+</ol>
+</fieldset>
+
+

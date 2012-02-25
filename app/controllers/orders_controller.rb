@@ -2,6 +2,7 @@ class OrdersController < ApplicationController
   
   # POST /orders
   # POST /orders.json
+  # note - this creates and order and order_transaction through the purchase method
   def create
     @order = Order.new(params[:order])
 
@@ -37,7 +38,7 @@ class OrdersController < ApplicationController
   # GET /orders/1.json
   def show
     @order = Order.find(params[:id])
-
+    @transactions = @order.transactions
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @order }
@@ -56,35 +57,35 @@ class OrdersController < ApplicationController
   end
 
   # GET /orders/1/edit
-  def edit
-    @order = Order.find(params[:id])
-  end
+  #def edit
+  #  @order = Order.find(params[:id])
+  #end
 
   # PUT /orders/1
   # PUT /orders/1.json
-  def update
-    @order = Order.find(params[:id])
-
-    respond_to do |format|
-      if @order.update_attributes(params[:order])
-        format.html { redirect_to @order, notice: 'Order was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  #def update
+  #  @order = Order.find(params[:id])
+  #
+  #  respond_to do |format|
+  #    if @order.update_attributes(params[:order])
+  #      format.html { redirect_to @order, notice: 'Order was successfully updated.' }
+  #      format.json { head :no_content }
+  #    else
+  #      format.html { render action: "edit" }
+  #      format.json { render json: @order.errors, status: :unprocessable_entity }
+  #    end
+  #  end
+  #end
 
   # DELETE /orders/1
   # DELETE /orders/1.json
-  def destroy
-    @order = Order.find(params[:id])
-    @order.destroy
-
-    respond_to do |format|
-      format.html { redirect_to orders_url }
-      format.json { head :no_content }
-    end
-  end
+  #def destroy
+  #  @order = Order.find(params[:id])
+  #  @order.destroy
+  #
+  #  respond_to do |format|
+  #    format.html { redirect_to orders_url }
+  #    format.json { head :no_content }
+  #  end
+  #end
 end

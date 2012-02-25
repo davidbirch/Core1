@@ -1,20 +1,61 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Total amount:</b>
+<form>
+<fieldset>  
+<legend>Order Details</legend>
+<ol>
+<li> 
+  Total amount:
   <%= @order.total_amount %>
-</p>
-
-<p>
-  <b>First name:</b>
+</li>
+</ol>
+</fieldset>
+<fieldset>
+<legend>Card Details</legend>
+<ol>
+<li>
+  First name:
   <%= @order.first_name %>
-</p>
-
-<p>
-  <b>Last name:</b>
+</li>
+<li>
+  Last name:
   <%= @order.last_name %>
+</li>
+<li>
+  Card expires on:
+  <%= @order.card_expires_on %>
+</li>
+</ol>
+</fieldset>
+<fieldset>
+<legend>Other Information</legend>
+<ol>
+<li>
+  ID:
+  <%= @order.id %>
+</li>
+<li>
+  Created at:
+  <%= @order.created_at %>
+</li>
+<li>
+  Updated at:
+  <%= @order.updated_at %>
+</li>
+<li>
+  Transaction count:
+  <%= @order.transactions.count %>
+</li>
+</ol>
+</fieldset>
+<% unless @order.transactions.empty? %>
+<fieldset>
+<legend>eWAY Transactions</legend>
+<%= render @transactions %>
+</fieldset>
+<% end %>
+</form>
+
+<p class="form_actions">
+<%= link_to 'Edit', edit_order_path(@order) %> | <%= link_to 'Back', orders_path %>
 </p>
-
-
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>

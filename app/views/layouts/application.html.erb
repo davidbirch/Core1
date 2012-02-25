@@ -25,10 +25,10 @@
   	<%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container">
-    <div class="row" id="payHead"> 
-      <%= render 'layouts/header' %>
-    </div>
+  <div class="container" id="payHead">  
+    <%= render 'layouts/header' %>
+  </div>
+  <div class="container" id="<%= controller.controller_name %>">
     <div class="row" id="payFlash">
       <div class="twelve columns">
         <% flash.each do |key, value| %>

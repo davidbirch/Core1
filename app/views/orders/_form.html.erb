@@ -11,31 +11,60 @@
     </div>
   <% end %>
 
+  <fieldset>  
+  <legend>Order Details</legend>
+  <ol>
+  <li> 
   <div class="field">
-    <%= f.label :total_amount %><br />
+    <%= f.label :total_amount %>
     <%= f.number_field :total_amount %>
   </div>
+  </li>
+  </ol>
+  </fieldset>
+  <fieldset>
+  <legend>Card Details</legend>
+  <ol>
+  <li>
   <div class="field">
-    <%= f.label :first_name %><br />
+    <%= f.label :first_name %>
     <%= f.text_field :first_name %>
   </div>
+  </li>
+  <li>
   <div class="field">
-    <%= f.label :last_name %><br />
+    <%= f.label :last_name %>
     <%= f.text_field :last_name %>
   </div>
+  </li>
+  <li>
   <div class="field">
-    <%= f.label :card_number %><br />
+    <%= f.label :card_number %>
     <%= f.text_field :card_number %>
   </div>
+  </li>
+  <li>
   <div class="field">
-    <%= f.label :card_verification %><br />
-    <%= f.text_field :card_verification %>
-  </div>
-  <div class="field">
-    <%= f.label :card_expires_on %><br />
+    <%= f.label :card_expires_on %>
     <%= f.date_select :card_expires_on, :discard_day => true, :start_year => Date.today.year, :end_year => (Date.today.year+10), :add_month_numbers => true %>
   </div>
+  </li>
+  </ol>
+  </fieldset>
+  <fieldset>
+  <legend>Card Verification Value (CVV)</legend>
+  <ol>
+  <li>
+  <div class="field">
+    <%= f.label :card_verification %>
+    <%= f.text_field :card_verification %>
+  </div>
+  </li>
+  </ol>
+  </fieldset>
+<fieldset class="submit">
   <div class="actions">
     <%= f.submit %>
   </div>
+  </fieldset>
 <% end %>
