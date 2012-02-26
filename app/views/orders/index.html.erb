@@ -1,18 +1,20 @@
-<h2>Listing orders</h2>
+<h2>Orders</h2>
 
 <table>
   <tr>
-    <th>Total amount</th>
-    <th>First name</th>
-    <th>Last name</th>
+    <th>ID</th>
+    <th>First</th>
+    <th>Last</th>
+    <th>Amount</th>
     <th></th>
   </tr>
 
 <% @orders.each do |order| %>
   <tr>
-    <td><%= order.total_amount %></td>
+    <td><%= order.id %></td>
     <td><%= order.first_name %></td>
     <td><%= order.last_name %></td>
+    <td><%= number_to_currency(order.total_amount.to_f) %></td>
     <td><%= link_to 'Show', order %></td>
   </tr>
 <% end %>

@@ -5,11 +5,11 @@ class CreateOrderTransactions < ActiveRecord::Migration
       t.string :action
       t.integer :amount
       
-      t.string :response_success
+      t.boolean :response_success
       t.string :response_authorization
       t.string :response_message
   
-      t.boolean :trxn_status
+      t.string :trxn_status
       t.string :trxn_number
       t.string :trxn_reference
       t.string :trxn_option_1

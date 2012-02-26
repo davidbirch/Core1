@@ -11,6 +11,15 @@
   
 }
 
+#payFooter {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border-bottom: 1px solid #E0E0E0;
+    border-top: 1px solid #E0E0E0;
+    padding: 15px 20px 13px;
+}
+
+
+
 #payDebug{
   display: none;
 }
@@ -86,6 +95,7 @@ legend {
   }
 form fieldset{
   margin:6px;
+  padding: 9px 0px 2px 0px;
   }
   
 .form_actions{
@@ -93,4 +103,9 @@ form fieldset{
 }
 form li{
   margin-bottom: 0px;
+}
+
+th, td{
+  padding-right: 5px;
+  padding-left: 5px;
 }

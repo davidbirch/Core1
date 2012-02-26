@@ -10,6 +10,22 @@
   <%= order_transaction.amount %>
 </li>
 <li>
+  response_success:
+  <%= order_transaction.response_success %>
+    <% if order_transaction.response_success %>
+    <%= image_tag("Badge-tick.png", :size => "16x16") %>
+  <% end %>
+</li>
+<li>
+  response_authorization:
+  <%= order_transaction.response_authorization %>
+
+</li>
+<li>
+  response_message:
+  <%= order_transaction.response_message %>
+</li>
+<li>
   trxn_status:
   <%= order_transaction.trxn_status %>
 </li>

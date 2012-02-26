@@ -17,10 +17,10 @@ ActiveRecord::Schema.define(:version => 20120221121248) do
     t.integer  "order_id"
     t.string   "action"
     t.integer  "amount"
-    t.string   "response_success"
+    t.boolean  "response_success"
     t.string   "response_authorization"
     t.string   "response_message"
-    t.boolean  "trxn_status"
+    t.string   "trxn_status"
     t.string   "trxn_number"
     t.string   "trxn_reference"
     t.string   "trxn_option_1"
@@ -35,12 +35,12 @@ ActiveRecord::Schema.define(:version => 20120221121248) do
   end
 
   create_table "orders", :force => true do |t|
-    t.integer  "total_amount"
+    t.decimal  "total_amount",    :precision => 8, :scale => 2
     t.string   "first_name"
     t.string   "last_name"
     t.date     "card_expires_on"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",                                    :null => false
+    t.datetime "updated_at",                                    :null => false
   end
 
 end

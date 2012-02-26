@@ -29,24 +29,17 @@
     <%= render 'layouts/header' %>
   </div>
   <div class="container" id="<%= controller.controller_name %>">
-    <div class="row" id="payFlash">
-      <div class="twelve columns">
-        <% flash.each do |key, value| %>
-          <%= content_tag(:div, value, :class => "flash #{key}") %>
-        <% end %>
-      </div>
-    </div>
     <div class="row" id="payBody"> 
       <%= yield %>  
     </div>
-    <div class="row" id="payFooter"> 
-      <%= render 'layouts/footer' %>
-    </div>
+  </div>
+  <div class="container" id="payFooter"> 
+    <%= render 'layouts/footer' %>
     <div class="row" id="payDebug">
       <div class="twelve columns">
-        <%= debug(params) if Rails.env.development? %>
+      <%= debug(params) if Rails.env.development? %>
       </div>
-    </div> 
+    </div>
   </div>
 </body>
 </html>

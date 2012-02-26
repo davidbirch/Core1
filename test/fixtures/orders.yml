@@ -3,7 +3,7 @@
 # Table name: orders
 #
 #  id              :integer(4)      not null, primary key
-#  total_amount    :integer(4)
+#  total_amount    :decimal(8, 2)
 #  first_name      :string(255)
 #  last_name       :string(255)
 #  card_expires_on :date

@@ -1,43 +1,22 @@
-<h1>Listing order_transactions</h1>
+<h2>Transactions</h2>
 
 <table>
   <tr>
+    <th>ID</th>
     <th>Order</th>
-    <th>Trxn status</th>
-    <th>Trxn number</th>
-    <th>Trxn reference</th>
-    <th>Trxn option 1</th>
-    <th>Trxn option 2</th>
-    <th>Trxn option 3</th>
-    <th>Auth code</th>
-    <th>Returnamount</th>
-    <th>Trxn error</th>
-    <th>Params</th>
-    <th></th>
-    <th></th>
+    <th>Action</th>
+    <th>Amount</th>
+    <th>Response</th>
     <th></th>
   </tr>
 
 <% @order_transactions.each do |order_transaction| %>
   <tr>
+    <td><%= order_transaction.id %></td>
     <td><%= order_transaction.order_id %></td>
-    <td><%= order_transaction.trxn_status %></td>
-    <td><%= order_transaction.trxn_number %></td>
-    <td><%= order_transaction.trxn_reference %></td>
-    <td><%= order_transaction.trxn_option_1 %></td>
-    <td><%= order_transaction.trxn_option_2 %></td>
-    <td><%= order_transaction.trxn_option_3 %></td>
-    <td><%= order_transaction.auth_code %></td>
-    <td><%= order_transaction.returnamount %></td>
-    <td><%= order_transaction.trxn_error %></td>
-    <td><%= order_transaction.params %></td>
+    <td><%= order_transaction.action %></td>
+    <td><%= order_transaction.response_success %></td>
     <td><%= link_to 'Show', order_transaction %></td>
-    <td><%= link_to 'Edit', edit_order_transaction_path(order_transaction) %></td>
-    <td><%= link_to 'Destroy', order_transaction, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Order transaction', new_order_transaction_path %>
